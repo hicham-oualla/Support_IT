@@ -2,7 +2,6 @@ package com.it.support.model;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.it.support.enums.EqType;
 import com.it.support.enums.EquipementStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,8 +22,6 @@ public class Equipement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    @Enumerated(EnumType.STRING)
-    private EqType type;
     @Enumerated(EnumType.STRING)
     private EquipementStatus status;
 
