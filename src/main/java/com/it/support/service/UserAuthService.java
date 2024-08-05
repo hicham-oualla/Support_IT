@@ -2,6 +2,8 @@ package com.it.support.service;
 
 
 
+import com.it.support.dto.AuthRequestDTO;
+import com.it.support.dto.JwtResponseDTO;
 import com.it.support.model.Person;
 import com.it.support.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
