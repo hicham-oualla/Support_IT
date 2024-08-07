@@ -22,11 +22,6 @@ public class Panne {
 
 
 
-
-    @OneToMany(mappedBy = "panne")
-    private List<HistoriquePanne> historiques;
-
-    @ManyToOne
-    @JoinColumn(name = "panneId")
-    private Panne panne;
+    @OneToMany(mappedBy  = "panne", cascade = CascadeType.ALL)
+    private List<Ticket> tickets;
 }

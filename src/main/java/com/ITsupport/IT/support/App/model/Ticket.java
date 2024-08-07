@@ -32,7 +32,10 @@ public class Ticket {
     @ManyToOne
     @JoinColumn(name = "equipementId")
     private Equipment equipment;
-    @OneToMany(mappedBy = "panne", cascade = CascadeType.ALL)
-    private List<Ticket> tickets;
+
+    @ManyToOne
+    @JoinColumn(name = "panneId")
+    private Panne panne;
+
 
 }
