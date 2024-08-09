@@ -1,7 +1,7 @@
 package com.ITsupport.IT.support.App.controller;
 
 import com.ITsupport.IT.support.App.model.Ticket;
-import com.ITsupport.IT.support.App.service.Imlp.TicketService;
+import com.ITsupport.IT.support.App.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/tickets")
+@RequestMapping("api/v1/auth/Admin/tickets")
 public class TicketController {
 
     @Autowired
