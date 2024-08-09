@@ -1,8 +1,11 @@
 package com.ITsupport.IT.support.App.service.Imlp;
 
+import com.ITsupport.IT.support.App.model.Technicien;
 import com.ITsupport.IT.support.App.model.Ticket;
+import com.ITsupport.IT.support.App.model.Utilisateur;
+import com.ITsupport.IT.support.App.repository.PersonneRepository;
 import com.ITsupport.IT.support.App.repository.TicketRepository;
-import com.ITsupport.IT.support.App.service.Imlp.TicketService;
+import com.ITsupport.IT.support.App.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,16 +17,21 @@ public class TicketServiceImpl implements TicketService {
 
     @Autowired
     private TicketRepository ticketRepository;
+    @Autowired
+    private PersonneRepository personneRepository;
 
     @Override
     public Ticket saveTicket(Ticket ticket) {
         return ticketRepository.save(ticket);
+
     }
 
     @Override
     public Optional<Ticket> getTicketById(Long id) {
         return ticketRepository.findById(id);
     }
+
+
 
     @Override
     public List<Ticket> getAllTickets() {

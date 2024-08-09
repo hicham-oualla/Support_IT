@@ -1,4 +1,4 @@
-package com.ITsupport.IT.support.App.service.Imlp;
+package com.ITsupport.IT.support.App.service;
 
 import com.ITsupport.IT.support.App.model.Ticket;
 
