@@ -51,4 +51,13 @@ public class TicketServiceImpl implements TicketService {
         }
         return null;
     }
+        @Override
+    public List<Ticket> getTicketsByTechnicien(Long id) {
+        Technicien technicien = (Technicien) personneRepository.findById(id).
+                orElseThrow(() -> new RuntimeException("Technicien not found"));
+        List<Ticket> tickets = ticketRepository.findByTechnicien(technicien);
+        return tickets;
+    }
+
+
 }
