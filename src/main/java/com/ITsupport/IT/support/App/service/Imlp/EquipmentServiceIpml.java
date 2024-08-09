@@ -21,6 +21,7 @@ public class EquipmentServiceIpml implements EquipmentService {
         return equipmentRepository.save(equipment);
     }
 
+
     @Override
     public Equipment editEquipment(Long id, Equipment equipment) {
         equipmentRepository.findById(id);

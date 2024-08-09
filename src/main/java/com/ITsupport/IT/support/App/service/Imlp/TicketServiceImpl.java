@@ -8,7 +8,6 @@ import com.ITsupport.IT.support.App.repository.TicketRepository;
 import com.ITsupport.IT.support.App.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -51,4 +50,22 @@ public class TicketServiceImpl implements TicketService {
         }
         return null;
     }
+        @Override
+    public List<Ticket> getTicketsByTechnicien(Long id) {
+        Technicien technicien = (Technicien) personneRepository.findById(id).
+                orElseThrow(() -> new RuntimeException("Technicien not found"));
+        List<Ticket> tickets = ticketRepository.findByTechnicien(technicien);
+        return tickets;
+    }
+
+    @Override
+    public List<Ticket> getTicketsByUtilisateur(Long id) {
+        Utilisateur utilisateur = (Utilisateur) personneRepository.findById(id).
+                orElseThrow(() -> new RuntimeException("Utilisateur not found"));
+        List<Ticket> tickets = ticketRepository.findByUtilisateur(utilisateur);
+        return tickets;
+    }
+
+
+
 }
