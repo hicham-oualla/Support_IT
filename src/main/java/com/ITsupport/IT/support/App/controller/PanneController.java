@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/panne")
-public class PanneController {
+@RequestMapping("api/v1/auth/Admin/panne")
+public class  PanneController {
+
+
     @Autowired
     PanneService panneService;
 

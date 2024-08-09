@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/equipment")
+@RequestMapping("api/v1/auth/Admin/equipment")
 public class EquuipmentsCotroller {
 
      @Autowired
@@ -29,6 +29,7 @@ public class EquuipmentsCotroller {
     public void deleteEquipment(@PathVariable Long id){
          equipmentService.deleteEquipment(id);
      }
+
      @PutMapping("/edit/{id}")
      public Equipment editEquipment(@PathVariable Long id,@RequestBody Equipment equipment){
          return equipmentService.editEquipment(id, equipment);
