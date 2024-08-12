@@ -14,6 +14,7 @@ public interface TicketService {
      List<Ticket> getTicketsByTechnicien(Long id);
     List<Ticket> getTicketsByUtilisateur(Long id);
     Ticket assignerTicket(Long id, Ticket ticket);
+    Ticket changerStatut(Long id, Ticket ticket);
 
 
 }
