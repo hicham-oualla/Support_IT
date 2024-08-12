@@ -77,6 +77,15 @@ public class TicketServiceImpl implements TicketService {
 
         return ticketRepository.save(assignerTicked);
     }
+    @Override
+    public Ticket changerStatut(Long id, Ticket ticket) {
 
+        Ticket ticketStaut = ticketRepository.findById(id)
+                .orElseThrow(() ->new RuntimeException("Ticket not found"));
+
+        ticketStaut.setStatut(ticket.getStatut());
+
+        return ticketRepository.save(ticketStaut);
+    }
 
 }
