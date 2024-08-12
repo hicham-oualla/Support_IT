@@ -64,6 +64,11 @@ public class TicketController {
         List<Ticket> tickets = ticketService.getTicketsByUtilisateur(id);
         return ResponseEntity.ok(tickets);
     }
+    @PutMapping("/assigner/{id}")
+    public Ticket assignerTicket(@PathVariable Long id, @RequestBody Ticket ticket){
+        return ticketService.assignerTicket(id, ticket);
+    }
+
 
 
 }
