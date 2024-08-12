@@ -13,4 +13,7 @@ public interface TicketService {
     Ticket updateTicket(Long id, Ticket ticket);
      List<Ticket> getTicketsByTechnicien(Long id);
     List<Ticket> getTicketsByUtilisateur(Long id);
+    Ticket assignerTicket(Long id, Ticket ticket);
+
+
 }
