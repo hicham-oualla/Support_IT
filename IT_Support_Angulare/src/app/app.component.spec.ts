@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'IT_Support_Angulare'`, () => {
+  it(`should have as title 'IT_Support-Angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('IT_Support_Angulare');
+    expect(app.title).toEqual('IT_Support-Angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('IT_Support_Angulare app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('IT_Support-Angular app is running!');
   });
 });
