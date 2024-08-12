@@ -19,26 +19,38 @@ public class SecurityConfig {
 
     private final AuthenticationProvider authenticationProvider;
 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(authorize -> authorize
-                                .requestMatchers("/api/v1/auth/registerAdmin", "/api/v1/auth/authenticate").permitAll()
-                                .requestMatchers("/api/v1/auth/utilisateur/**","api/v1/auth/ticket/add","api/v1/auth/ticket/ticketByUser/"
-                                ,"api/v1/auth/panne/all").hasAuthority("USER")
-                                .requestMatchers("/api/v1/auth/Admin/**","api/v1/auth/panne").hasAuthority("ADMIN")
-                                .requestMatchers("/api/v1/auth/technicien/**","/api/v1/auth/ticket/ticketBytech/**").hasAuthority("TECHNICIEN")
+//    @Bean
+//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//        http.csrf(csrf -> csrf.disable())
+//                .authorizeHttpRequests(authorize -> authorize
+//                                .requestMatchers("/api/v1/auth/registerAdmin", "/api/v1/auth/authenticate").permitAll()
+//                                .requestMatchers("/api/v1/auth/utilisateur/**","api/v1/auth/ticket/add","api/v1/auth/ticket/ticketByUser/"
+//                                ,"api/v1/auth/panne/all").hasAuthority("USER")
+//                                .requestMatchers("/api/v1/auth/Admin/**","api/v1/auth/panne").hasAuthority("ADMIN")
+//                                .requestMatchers("/api/v1/auth/technicien/**","/api/v1/auth/ticket/ticketBytech/**").hasAuthority("TECHNICIEN")
+//
+//                                .anyRequest()
+//                                .authenticated()
+//                )
+//                .sessionManagement(session -> session
+//                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//                )
+//                .authenticationProvider(authenticationProvider)
+//                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+//
+//        return http.build();
+//    }
+@Bean
+public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    http.csrf(csrf -> csrf.disable())
+            .authorizeHttpRequests(authorize -> authorize
+                    .anyRequest().permitAll()
+            )
+            .sessionManagement(session -> session
+                    .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+            );
 
-                                .anyRequest()
-                                .authenticated()
-                )
-                .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                )
-                .authenticationProvider(authenticationProvider)
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-
-        return http.build();
-    }
+    return http.build();
+}
 
 }

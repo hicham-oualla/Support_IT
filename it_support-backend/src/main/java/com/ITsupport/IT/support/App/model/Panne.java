@@ -24,4 +24,6 @@ public class Panne {
 
     @OneToMany(mappedBy  = "panne", cascade = CascadeType.ALL)
     private List<Ticket> tickets;
+
+
 }
