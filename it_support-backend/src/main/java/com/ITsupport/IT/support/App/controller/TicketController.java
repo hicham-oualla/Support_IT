@@ -68,6 +68,10 @@ public class TicketController {
     public Ticket assignerTicket(@PathVariable Long id, @RequestBody Ticket ticket){
         return ticketService.assignerTicket(id, ticket);
     }
+    @PutMapping("/statut/{id}")
+    public Ticket changetStatut(@PathVariable Long id, @RequestBody Ticket ticket){
+        return ticketService.changerStatut(id, ticket);
+    }
 
 
 
