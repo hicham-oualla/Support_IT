@@ -65,7 +65,18 @@ public class TicketServiceImpl implements TicketService {
         List<Ticket> tickets = ticketRepository.findByUtilisateur(utilisateur);
         return tickets;
     }
+    public Ticket assignerTicket(Long id, Ticket ticket) {
 
+        Ticket assignerTicked = ticketRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Ticket not found"));
+
+        Technicien technicien = (Technicien) personneRepository.findById(ticket.getTechnicien().getId())
+                .orElseThrow(() -> new RuntimeException("Technicien not found"));
+        assignerTicked.setTechnicien(technicien);
+
+
+        return ticketRepository.save(assignerTicked);
+    }
 
 
 }
