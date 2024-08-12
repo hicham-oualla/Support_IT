@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/auth/Admin/equipment")
+@CrossOrigin(origins = "*")
 public class EquuipmentsCotroller {
 
      @Autowired
