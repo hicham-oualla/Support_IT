@@ -12,6 +12,7 @@ import { CreatePanneComponent } from './components/create-panne/create-panne.com
 import { PannesComponent } from './components/pannes/pannes.component';
 import { ChangerStatutComponent } from './components/changer-statut/changer-statut.component';
 import { UpdatePanneComponent } from './components/update-panne/update-panne.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UpdatePanneComponent } from './components/update-panne/update-panne.com
     CreatePanneComponent,
     PannesComponent,
     ChangerStatutComponent,
-    UpdatePanneComponent
+    UpdatePanneComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
