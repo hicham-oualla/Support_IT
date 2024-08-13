@@ -111,6 +111,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>dockerit_support</finalName>
 	</build>
 
 </project>
