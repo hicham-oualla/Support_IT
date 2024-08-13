@@ -8,11 +8,13 @@ import {CreatePanneComponent} from "./components/create-panne/create-panne.compo
 import {PannesComponent} from "./components/pannes/pannes.component";
 import {ChangerStatutComponent} from "./components/changer-statut/changer-statut.component";
 import {UpdatePanneComponent} from "./components/update-panne/update-panne.component";
+import {RegistreUserComponent} from "./registre-user/registre-user.component";
 
 const routes: Routes = [
   {path:'', component: AppComponent},
   {path:'addEquipement', component:AddEquipementComponent},
   {path:'equipements', component: EquipementComponent},
+  {path:'regqitreuser', component: RegistreUserComponent},
   {path:'updateEquipement/:id', component: UpdateEquipementComponent},
   {path:'addPanne', component: CreatePanneComponent},
   {path:'pannes', component: PannesComponent},
