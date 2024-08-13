@@ -1,4 +1,4 @@
-FROM ubuntu:latest
-LABEL authors="user"
-
-ENTRYPOINT ["top", "-b"]
+FROM openjdk:21
+EXPOSE 8080
+ADD target/dockerit_support.jar support.jar
+ENTRYPOINT ["java", "-jar", "/support.jar"]
