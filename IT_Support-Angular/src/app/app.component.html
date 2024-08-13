@@ -1,17 +1,14 @@
-<nav class="navbar navbar-expand-sm navbar-dark">
-  <ul class="navbar-nav">
-    <li>
-      <a routerLink="equipements" class="nav-link">Equipements</a>
-    </li>
-    <li>
-      <a routerLink="addEquipement" class="nav-link">Add Equipement</a>
-    </li>
-    <li>
-      <a routerLink="addPanne" class="nav-link">Add Panne</a>
-    </li>
-    <li>
-      <a routerLink="pannes" class="nav-link">Pannes</a>
-    </li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<!-- app.component.html -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-2 col-sm-2 col-lg-2 d-md-block sidebar">
+      <app-side-bar></app-side-bar>
+    </nav>
+
+    <!-- Main content -->
+    <main class="col-md-10 col-sm-10 ms-sm-auto col-lg-10 px-4">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
