@@ -13,6 +13,7 @@ import { PannesComponent } from './components/pannes/pannes.component';
 import { ChangerStatutComponent } from './components/changer-statut/changer-statut.component';
 import { UpdatePanneComponent } from './components/update-panne/update-panne.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     PannesComponent,
     ChangerStatutComponent,
     UpdatePanneComponent,
-    SideBarComponent
+    SideBarComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
