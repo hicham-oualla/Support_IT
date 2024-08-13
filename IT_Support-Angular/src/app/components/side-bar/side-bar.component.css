@@ -79,6 +79,11 @@ body {
     transform: scale(1, 1);
   }
 }
+.navbar__link i {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
 
 /* Repeat keyframe definitions for gooeyEffect-2 to gooeyEffect-12, adjusting the transform scale values as needed */
 
@@ -93,4 +98,3 @@ body {
   animation: gooeyEffect-1 250ms 1;
 }
 
-/* Repeat similar rules for .navbar__item:first-child:nth-last-child(n) for n = 2 to 12, adjusting keyframe references and top values accordingly */

@@ -24,6 +24,10 @@ export class PannesComponent implements OnInit{
 
   updatePanne(id: Number) {
     this.router.navigate(['updatePanne', id])
+
+  }
+  addPanne() {
+    this.router.navigate(['addPanne'])
   }
 
   getPannes(){
