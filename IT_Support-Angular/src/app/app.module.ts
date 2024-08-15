@@ -36,7 +36,7 @@ import { RegistreUserComponent } from './registre-user/registre-user.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

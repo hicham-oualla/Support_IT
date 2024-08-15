@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Utilisateurs</h2>
+  <a routerLink="/add" style="width: 20%" class="btn btn-success">Ajouter Utilisateur</a>
+  <div class="cards">
+    <div class="card" style="width: 17rem;" *ngFor="let user of User">
+      <div class="card-body">
+        <label of="fullName">FullName</label>
+        <h5 name="fullName" class="card-title">{{ user.nom }}</h5>
+        <label of="Id">Id</label>
+        <p name="Id" class="card-text">{{user.id}}</p>
+        <label of="email">Email</label>
+        <p of="email" class="card-text">{{user.email}}</p>
+      </div>
+    </div>
+  </div>
+</div>
