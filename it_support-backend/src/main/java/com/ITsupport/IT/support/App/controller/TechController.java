@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 @RestController
-@RequestMapping("/tech/getALLtech/")
+@RequestMapping("/api/v1/auth/tech/getALLtech/")
 public class TechController {
 
 

@@ -9,6 +9,7 @@ import {PannesComponent} from "./components/pannes/pannes.component";
 import {ChangerStatutComponent} from "./components/changer-statut/changer-statut.component";
 import {UpdatePanneComponent} from "./components/update-panne/update-panne.component";
 import {RegistreUserComponent} from "./registre-user/registre-user.component";
+import {UserListComponent} from "./user-list/user-list.component";
 
 const routes: Routes = [
   {path:'', component: AppComponent},
@@ -19,7 +20,9 @@ const routes: Routes = [
   {path:'addPanne', component: CreatePanneComponent},
   {path:'pannes', component: PannesComponent},
   {path:'statut/:id', component:ChangerStatutComponent},
-  {path:'updatePanne/:id', component: UpdatePanneComponent}
+  {path:'updatePanne/:id', component: UpdatePanneComponent},
+  {path:'user_liste', component: UserListComponent},
+  {path:'add', component: RegistreUserComponent}
 ];
 
 @NgModule({
