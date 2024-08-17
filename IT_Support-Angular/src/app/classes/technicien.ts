@@ -1,12 +1,6 @@
-import {Roles} from "../roles";
-
-
-export class User {
+export class Technicien {
   id?: number;
   nom?: string;
   email?: string;
   password?: String;
-
 }
-
-

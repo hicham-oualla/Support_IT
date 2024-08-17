@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Equipement} from "../../classes/equipement";
 import {EquipementService} from "../../services/equipement.service";
 import {Router} from "@angular/router";
+import {HttpHeaders} from "@angular/common/http";
 
 @Component({
   selector: 'app-equipement',
@@ -10,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class EquipementComponent implements OnInit{
 
-  equipments!: Equipement[];
+  equipments: Equipement[]=[];
 
   constructor(private equipmentService: EquipementService,
               private router: Router) { }
@@ -19,11 +20,11 @@ export class EquipementComponent implements OnInit{
     this.getEquipments()
   }
 
-  private getEquipments(){
+   getEquipments(){
     this.equipmentService.getEquipments().subscribe(
-      data=>{
-        this.equipments = data
-        console.log(data)
+        (data)=>{
+          console.log(data)
+          this.equipments = data;
       }
     )
   }
@@ -48,5 +49,6 @@ export class EquipementComponent implements OnInit{
       }
     )
   }
+
 
 }

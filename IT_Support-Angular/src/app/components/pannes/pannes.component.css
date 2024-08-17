@@ -1,12 +1,81 @@
-.container{
+.container {
   display: flex;
   flex-direction: column;
   gap: 2em;
+  padding: 2em; /* Added padding for spacing */
 }
-.title{
-  margin-top: 2%;
-  margin-left: 40%;
+
+.title {
+  text-align: center; /* Center align title */
+  margin: 0; /* Remove default margin */
+  color: #343a40; /* Dark color for the title for contrast */
 }
-.tablaux{
-  width: 100%;
+
+.btn {
+  margin: 0.5em; /* Add margin around buttons */
+}
+
+.table {
+  width: 100%; /* Ensure table takes full width */
+  margin-top: 1em; /* Add margin to top of table */
+}
+
+.table-light {
+  background-color: #ffffff; /* White background color for the table */
+  color: #212529; /* Dark text color for readability */
+  border-radius: 0.5em; /* Rounded corners for the table */
+  border: 1px solid #dee2e6; /* Light border around the table */
+}
+
+.table-light th,
+.table-light td {
+  padding: 1em; /* Padding for table cells */
+}
+
+.table-light th {
+  background-color: #f8f9fa; /* Very light gray background for table headers */
+  color: #495057; /* Darker text color for headers */
+  text-align: center; /* Center align table headers */
+}
+
+.table-light td {
+  text-align: center; /* Center align table cells */
+}
+
+.table-light tr:nth-child(even) {
+  background-color: #f9f9f9; /* Slightly gray background for even rows */
+}
+
+.table-light tr:hover {
+  background-color: #e9ecef; /* Light gray highlight on row hover */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Primary button color */
+  border: none; /* Remove border for the button */
+  color: white; /* White text color for the button */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.btn-success {
+  background-color: #28a745; /* Success button color */
+  border: none; /* Remove border for the button */
+  color: white; /* White text color for the button */
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Darker shade on hover */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Danger button color */
+  border: none; /* Remove border for the button */
+  color: white; /* White text color for the button */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker shade on hover */
 }

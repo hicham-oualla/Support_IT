@@ -6,3 +6,7 @@ export enum Roles {
 }
 
 
+export  enum  EtatTicket{
+  TRAITTE,NOTRAITE,ENCOURS
+
+}
