@@ -10,19 +10,28 @@ import {ChangerStatutComponent} from "./components/changer-statut/changer-statut
 import {UpdatePanneComponent} from "./components/update-panne/update-panne.component";
 import {RegistreUserComponent} from "./registre-user/registre-user.component";
 import {UserListComponent} from "./user-list/user-list.component";
+import {TechListeComponent} from "./tech-liste/tech-liste.component";
+import {RegistreTechComponent} from "./registre-tech/registre-tech.component";
+import {TicketsComponent} from "./components/tickets/tickets.component";
+import {LoginComponent} from "./components/login/login.component";
+import {guardGuard} from "./guards/guard.guard";
 
 const routes: Routes = [
   {path:'', component: AppComponent},
-  {path:'addEquipement', component:AddEquipementComponent},
-  {path:'equipements', component: EquipementComponent},
-  {path:'regqitreuser', component: RegistreUserComponent},
-  {path:'updateEquipement/:id', component: UpdateEquipementComponent},
-  {path:'addPanne', component: CreatePanneComponent},
-  {path:'pannes', component: PannesComponent},
-  {path:'statut/:id', component:ChangerStatutComponent},
-  {path:'updatePanne/:id', component: UpdatePanneComponent},
-  {path:'user_liste', component: UserListComponent},
-  {path:'add', component: RegistreUserComponent}
+  {path:'login', component: LoginComponent},
+  {path:'addEquipement', component:AddEquipementComponent, canActivate:[guardGuard]},
+  {path:'equipements', component: EquipementComponent, canActivate:[guardGuard]},
+  {path:'regqitreuser', component: RegistreUserComponent, canActivate:[guardGuard]},
+  {path:'updateEquipement/:id', component: UpdateEquipementComponent, canActivate:[guardGuard]},
+  {path:'addPanne', component: CreatePanneComponent, canActivate:[guardGuard]},
+  {path:'pannes', component: PannesComponent, canActivate:[guardGuard]},
+  {path:'statut/:id', component:ChangerStatutComponent, canActivate:[guardGuard]},
+  {path:'updatePanne/:id', component: UpdatePanneComponent, canActivate:[guardGuard]},
+  {path:'user_liste', component: UserListComponent, canActivate:[guardGuard]},
+  {path:'add', component: RegistreUserComponent, canActivate:[guardGuard]},
+  {path:'techniciens', component: TechListeComponent, canActivate:[guardGuard]},
+  {path:'techniciens/addtech', component:RegistreTechComponent, canActivate:[guardGuard]},
+  {path:"tickets", component: TicketsComponent, canActivate:[guardGuard]}
 ];
 
 @NgModule({

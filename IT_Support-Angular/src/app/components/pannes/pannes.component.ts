@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 })
 export class PannesComponent implements OnInit{
 
-  panneList!:Panne[];
+  panneList:Panne[]=[];
 
   id!:number;
 
@@ -32,7 +32,7 @@ export class PannesComponent implements OnInit{
 
   getPannes(){
     this.panneService.getPannes().subscribe(
-      data=>{
+      (data)=>{
         console.log(data)
         this.panneList=data
       }
